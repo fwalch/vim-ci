@@ -22,4 +22,10 @@ but might eventually run at fixed intervals (e.g. once every day).
 
 This will trigger a Travis build, which will apply the patch, compile Vim and run the tests. For an example pull request, see [pull request #1][example-pr].
 
+To avoid too many pull requests, please consider re-using one of your existing pull requests. [Force-pushing][force-push] to an existing pull request's branch will trigger a new build.
+
+As an alternative, you can [enable Travis CI][travis-enable] for your forked repository.
+
 [example-pr]: https://github.com/fwalch/vim-ci/pull/1
+[force-push]: https://help.github.com/articles/using-git-rebase/#pushing-rebased-code-to-github
+[travis-enable]: travis-ci.org/profile
