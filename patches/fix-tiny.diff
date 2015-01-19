@@ -1,0 +1,26 @@
+# HG changeset patch
+# Parent b731e33ab4fd81a879827a85232e021f6b5622b5
+
+diff --git a/src/testdir/test16.in b/src/testdir/test16.in
+--- a/src/testdir/test16.in
++++ b/src/testdir/test16.in
+@@ -2,6 +2,7 @@ Tests for resetting "secure" flag after 
+ For KDE set a font, empty 'guifont' may cause a hang.
+ 
+ STARTTEST
++:so small.vim
+ :if $DISPLAY == "" | e! test.ok | wq! test.out | endif
+ :set exrc secure
+ :if has("gui_kde")
+diff --git a/src/testdir/test_command_count.in b/src/testdir/test_command_count.in
+--- a/src/testdir/test_command_count.in
++++ b/src/testdir/test_command_count.in
+@@ -1,7 +1,7 @@
+ Test for user command counts	    vim: set ft=vim :
+ 
+ STARTTEST
+-:so tiny.vim
++:so small.vim
+ :let g:lines = []
+ :com -range=% RangeLines :call add(g:lines, 'RangeLines '.<line1>.' '.<line2>)
+ :com -range -addr=arguments RangeArguments :call add(g:lines, 'RangeArguments '.<line1>.' '.<line2>)
