@@ -11,9 +11,6 @@ env:
     - FEATURES=normal
     - FEATURES=big
     - FEATURES=huge
-branches:
-  only:
-    - master
 sudo: false
 cache:
   directories:
