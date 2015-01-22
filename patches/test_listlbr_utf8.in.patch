@@ -1,6 +1,6 @@
 diff -Naru testdir-orig/test_listlbr_utf8.in testdir/test_listlbr_utf8.in
---- testdir-orig/test_listlbr_utf8.in	2015-01-21 11:21:22.000000000 +0000
-+++ testdir/test_listlbr_utf8.in	2015-01-22 07:57:25.000000000 +0000
+--- a/src/testdir/test_listlbr_utf8.in	2015-01-21 11:21:22.000000000 +0000
++++ b/src/testdir/test_listlbr_utf8.in	2015-01-22 07:57:25.000000000 +0000
 @@ -2,7 +2,7 @@
  
  STARTTEST
