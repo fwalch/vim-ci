@@ -204,7 +204,7 @@ diff -r c0df98c0770c runtime/doc/windows.txt
 diff -r c0df98c0770c src/ex_cmds.h
 --- a/src/ex_cmds.h	Sat Mar 21 14:20:16 2015 +0100
 +++ b/src/ex_cmds.h	Sat Mar 21 19:36:52 2015 -0700
-@@ -270,12 +270,18 @@
+@@ -270,6 +270,9 @@
  EX(CMD_cd,		"cd",		ex_cd,
  			BANG|FILE1|TRLBAR|CMDWIN,
  			ADDR_LINES),
@@ -214,14 +214,15 @@ diff -r c0df98c0770c src/ex_cmds.h
  EX(CMD_center,		"center",	ex_align,
  			TRLBAR|RANGE|WHOLEFOLD|EXTRA|CMDWIN|MODIFY,
  			ADDR_LINES),
- EX(CMD_cexpr,		"cexpr",	ex_cexpr,
- 			NEEDARG|WORD1|NOTRLCOM|TRLBAR|BANG,
+@@ -279,6 +282,9 @@
+ EX(CMD_cfile,		"cfile",	ex_cfile,
+ 			TRLBAR|FILE1|BANG,
  			ADDR_LINES),
 +EX(CMD_cfdo,		"cfdo",		ex_listdo,
 +			BANG|NEEDARG|EXTRA|NOTRLCOM|RANGE|NOTADR|DFLALL,
 +			ADDR_LINES),
- EX(CMD_cfile,		"cfile",	ex_cfile,
- 			TRLBAR|FILE1|BANG,
+ EX(CMD_cfirst,		"cfirst",	ex_cc,
+ 			RANGE|NOTADR|COUNT|TRLBAR|BANG,
  			ADDR_LINES),
 @@ -729,6 +735,9 @@
  EX(CMD_lcscope,		"lcscope",	do_cscope,
@@ -233,15 +234,15 @@ diff -r c0df98c0770c src/ex_cmds.h
  EX(CMD_left,		"left",		ex_align,
  			TRLBAR|RANGE|WHOLEFOLD|EXTRA|CMDWIN|MODIFY,
  			ADDR_LINES),
-@@ -741,6 +750,9 @@
- EX(CMD_lexpr,		"lexpr",	ex_cexpr,
- 			NEEDARG|WORD1|NOTRLCOM|TRLBAR|BANG,
+@@ -744,6 +753,9 @@
+ EX(CMD_lfile,		"lfile",	ex_cfile,
+ 			TRLBAR|FILE1|BANG,
  			ADDR_LINES),
 +EX(CMD_lfdo,		"lfdo",		ex_listdo,
 +			BANG|NEEDARG|EXTRA|NOTRLCOM|RANGE|NOTADR|DFLALL,
 +			ADDR_LINES),
- EX(CMD_lfile,		"lfile",	ex_cfile,
- 			TRLBAR|FILE1|BANG,
+ EX(CMD_lfirst,		"lfirst",	ex_cc,
+ 			RANGE|NOTADR|COUNT|TRLBAR|BANG,
  			ADDR_LINES),
 diff -r c0df98c0770c src/ex_cmds2.c
 --- a/src/ex_cmds2.c	Sat Mar 21 14:20:16 2015 +0100
